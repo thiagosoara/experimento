@@ -4,4 +4,6 @@
     <string name="email">Email</string>
     <string name="phone">Telefone</string>
     <string name="save">Salvar</string>
+    <string name="visualize">Visualizar</string>
+    <string name="information">Informação</string>
 </resources>

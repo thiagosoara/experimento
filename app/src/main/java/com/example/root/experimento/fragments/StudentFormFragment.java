@@ -59,8 +59,8 @@ public class StudentFormFragment extends Fragment {
                 student.setEmail(etEmail.getText().toString());
                 student.setPhone(etPhone.getText().toString());
                 dao.insert(student);
-                MainActivity activity = (MainActivity) getActivity();
-                activity.loadStudents();
+                OnRefreshFormOK activity = (OnRefreshFormOK) getActivity();
+                activity.refresh();
                 if (!isLandScape())
                     getActivity().finish();
                 Toast.makeText(getActivity(),"Usuário inserido com sucesso!", Toast.LENGTH_SHORT).show();
@@ -75,6 +75,10 @@ public class StudentFormFragment extends Fragment {
         if(configuration.orientation == Configuration.ORIENTATION_LANDSCAPE)
             return true;
         return false;
+    }
+
+    public interface OnRefreshFormOK{
+        public void refresh();
     }
 
 }

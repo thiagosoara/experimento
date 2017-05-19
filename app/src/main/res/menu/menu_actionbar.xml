@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+        <item
+            android:id="@+id/action_visualize"
+            android:icon="@drawable/ic_view_carousel_white_48dp"
+            android:title="@string/visualize"
+            app:showAsAction="ifRoom"/>
+        <item
+            android:id="@+id/info"
+            android:title="@string/information"
+            app:showAsAction="withText"/>
+</menu>

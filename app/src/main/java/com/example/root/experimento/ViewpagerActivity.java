@@ -1,30 +1,26 @@
 package com.example.root.experimento;
 
-import android.content.Intent;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.ButtonBarLayout;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Toast;
 
-import com.example.root.experimento.model.Student;
-
-public class FormStudentActivity extends AppCompatActivity {
+public class ViewpagerActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_form_student);
+        setContentView(R.layout.activity_viewpager);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        //toolbar.setNavigationIcon(R.mipmap.ic_launcher);
         setSupportActionBar(toolbar);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
 
+        ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
+        String[] titles = {"Pagina 1", "Pagina 2", "Pagina 3"};
+        PageFragmentAdaper adaper = new PageFragmentAdaper(getSupportFragmentManager(), titles );
+        viewPager.setAdapter(adaper);
 
     }
 }
