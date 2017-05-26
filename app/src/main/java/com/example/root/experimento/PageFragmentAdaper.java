@@ -19,10 +19,10 @@ class PageFragmentAdaper extends FragmentPagerAdapter {
     String[] titles;
     List<PageFragment> pages = new ArrayList<PageFragment>();
 
+
     public PageFragmentAdaper(FragmentManager fm, String[] titles) {
         super(fm);
         this.titles = titles;
-        this.pages.add(new PageFragment());
         this.pages.add(new PageFragment());
         this.pages.add(new PageFragment());
     }
@@ -34,11 +34,16 @@ class PageFragmentAdaper extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 2;
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
         return titles[position];
+    }
+
+    @Override
+    public int getItemPosition(Object object) {
+        return POSITION_NONE;
     }
 }
