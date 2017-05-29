@@ -6,7 +6,12 @@
             android:id="@+id/action_visualize"
             android:icon="@drawable/ic_view_carousel_white_48dp"
             android:title="@string/visualize"
-            app:showAsAction="ifRoom"/>
+            app:showAsAction="withText"/>
+        <item
+            android:id="@+id/action_map"
+            android:icon="@drawable/ic_map_white_48dp"
+            android:title="@string/address"
+            app:showAsAction="always"/>
         <item
             android:id="@+id/info"
             android:title="@string/information"

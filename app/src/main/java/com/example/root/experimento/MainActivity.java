@@ -57,11 +57,16 @@ public class MainActivity extends AppCompatActivity implements StudentFormFragme
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Intent it;
         switch (item.getItemId()){
             case R.id.action_visualize:
-                Intent it = new Intent(this, ViewpagerActivity.class);
+                it = new Intent(this, ViewpagerActivity.class);
                 startActivity(it);
-                return true;
+                break;
+            case R.id.action_map:
+                it = new Intent(this, MapsActivity.class);
+                startActivity(it);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

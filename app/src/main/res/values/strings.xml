@@ -6,4 +6,6 @@
     <string name="save">Salvar</string>
     <string name="visualize">Visualizar</string>
     <string name="information">Informação</string>
+    <string name="address">Endereço</string>
+    <string name="title_activity_maps">Map</string>
 </resources>
