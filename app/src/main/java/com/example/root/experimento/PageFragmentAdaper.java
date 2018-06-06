@@ -34,7 +34,7 @@ class PageFragmentAdaper extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 2;
+        return pages.size();
     }
 
     @Override

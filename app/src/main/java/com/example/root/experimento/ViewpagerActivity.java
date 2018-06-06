@@ -41,7 +41,7 @@ public class ViewpagerActivity extends AppCompatActivity {
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
-        String[] titles = {"Pagina 1", "Pagina 2", "Pagina 3"};
+        String[] titles = {"Pagina 1", "Pagina 2"};
         adaper = new PageFragmentAdaper(getSupportFragmentManager(), titles );
         viewPager.setAdapter(adaper);
 
@@ -60,7 +60,7 @@ public class ViewpagerActivity extends AppCompatActivity {
                 List<Pokemon> pokemons = null;
 
                 try {
-                    URL url = new URL("http://pokeapi.co/api/v2/pokemon");
+                    URL url = new URL("https://pokeapi.co/api/v2/pokemon");
                     HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
                     connection.connect();

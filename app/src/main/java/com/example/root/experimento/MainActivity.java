@@ -62,11 +62,11 @@ public class MainActivity extends AppCompatActivity implements StudentFormFragme
             case R.id.action_visualize:
                 it = new Intent(this, ViewpagerActivity.class);
                 startActivity(it);
-                break;
+                return true;
             case R.id.action_map:
                 it = new Intent(this, MapsActivity.class);
                 startActivity(it);
-                break;
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

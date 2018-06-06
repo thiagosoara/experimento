@@ -59,10 +59,13 @@ public class StudentFormFragment extends Fragment {
                 student.setEmail(etEmail.getText().toString());
                 student.setPhone(etPhone.getText().toString());
                 dao.insert(student);
-                OnRefreshFormOK activity = (OnRefreshFormOK) getActivity();
-                activity.refresh();
-                if (!isLandScape())
+
+                if (!isLandScape()) {
                     getActivity().finish();
+                }else{
+                    OnRefreshFormOK activity = (OnRefreshFormOK) getActivity();
+                    activity.refresh();
+                }
                 Toast.makeText(getActivity(),"Usuário inserido com sucesso!", Toast.LENGTH_SHORT).show();
 
             }
